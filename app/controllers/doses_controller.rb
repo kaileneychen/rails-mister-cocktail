@@ -20,11 +20,10 @@ class DosesController < ApplicationController
     @dose.destroy
     redirect_to cocktails_path(@dose.cocktail)
   end
-end
 
-private
+  private
 
- def doses_params
+  def doses_params
     params.require(:dose).permit(:description, :ingredient_id)
   end
 end
